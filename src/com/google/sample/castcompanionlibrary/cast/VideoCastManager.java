@@ -1631,6 +1631,7 @@ public class VideoCastManager extends BaseCastManager
      */
     public synchronized void removeVideoCastConsumer(IVideoCastConsumer listener) {
         if (null != listener) {
+            super.removeBaseCastConsumer(listener);
             mVideoConsumers.remove(listener);
         }
     }
